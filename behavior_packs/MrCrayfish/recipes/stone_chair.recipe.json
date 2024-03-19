@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:stone_chair"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:cobblestone"
+            }
+        },
+        "result": {
+            "item": "cfm:stone_chair",
+            "count": 1
+        }
+    }
+}

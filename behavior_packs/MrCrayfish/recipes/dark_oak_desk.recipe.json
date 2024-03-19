@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:dark_oak_desk"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "P P",
+            "P P"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log2",
+                "data": 1
+            },
+            "P": {
+                "item": "minecraft:planks",
+                "data": 5
+            }
+        },
+        "result": {
+            "item": "cfm:dark_oak_desk",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,37 @@
+//bridge-file-version: #10
+{
+	"format_version": 2,
+	"header": {
+		"name": "MrCrayfish´s Furniture Add-on (RP)",
+		"description": "Resource pack for \"MrCrayfish's Furniture addon\"",
+		"uuid": "8037b873-6f49-43e3-85a5-7202810321e9",
+		"version": [
+			20,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			13,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "b74ad028-913e-4056-a906-f1bed19d350c",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.4"
+			]
+		}
+	}
+}

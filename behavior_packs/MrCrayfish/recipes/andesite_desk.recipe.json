@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:andesite_desk"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "S S",
+            "S S"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 6
+            },
+            "S": {
+                "item": "minecraft:stone",
+                "data": 5
+            }
+        },
+        "result": {
+            "item": "cfm:andesite_desk",
+            "count": 1
+        }
+    }
+}

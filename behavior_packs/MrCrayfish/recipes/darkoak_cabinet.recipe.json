@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:darkoak_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#C#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 5
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:darkoak_cabinet",
+            "count": 1
+        }
+    }
+}

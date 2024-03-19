@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:bedside_cabinet_andesite"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#C#",
+            "#C#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 5
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:bedside_cabinet_andesite",
+            "count": 1
+        }
+    }
+}

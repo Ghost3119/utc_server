@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:birch_desk_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "PCP",
+            "P P"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log",
+                "data": 2
+            },
+            "P": {
+                "item": "minecraft:planks",
+                "data": 2
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:birch_desk_cabinet",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:diorite_desk"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "S S",
+            "S S"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 4
+            },
+            "S": {
+                "item": "minecraft:stone",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:diorite_desk",
+            "count": 1
+        }
+    }
+}

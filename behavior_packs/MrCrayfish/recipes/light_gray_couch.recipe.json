@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:light_gray_couch"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 8
+            }
+        },
+        "result": {
+            "item": "cfm:light_gray_couch",
+            "count": 1
+        }
+    }
+}

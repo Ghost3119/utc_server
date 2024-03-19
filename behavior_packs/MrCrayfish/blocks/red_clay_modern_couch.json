@@ -1,0 +1,273 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.20.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:red_clay_modern_couch",
+			"states": {
+				"cray:1": [
+					1,
+					2,
+					3,
+					4,
+					5
+				],
+				"cray:2": [
+					0,
+					1
+				],
+				"cray:3": [
+					0,
+					1
+				]
+			},
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_modern_couch"
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:map_color": "#00ff00",
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 10
+			},
+			"tag:couch": {},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "cfm:connect"
+				},
+				"interval_range": [
+					0,
+					0
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "red_clay_modern_couch",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:flammable": {
+				"flame_odds": 0,
+				"burn_odds": 0
+			},
+			"minecraft:on_player_placing": {
+				"event": "furniture:place"
+			},
+			"minecraft:on_placed": {
+				"event": "sit"
+			},
+			"minecraft:loot": "loot_tables/red_clay_modern_couch.json",
+			"minecraft:on_interact": {
+				"event": "rider"
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.modern_couch",
+				"bone_visibility": {
+					"a": "query.block_state('cray:2') == 0",
+					"b": "query.block_state('cray:3') == 0"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			}
+		},
+		"events": {
+			"furniture:place": {
+				"set_block_state": {
+					"cray:1": "(query.cardinal_facing_2d)"
+				}
+			},
+			"cfm:connect": {
+				"sequence": [
+					{
+						"condition": "query.block_neighbor_has_any_tag(-1, 0, 0, 'couch') && query.block_state('cray:1') == 2",
+						"set_block_state": {
+							"cray:2": 1
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'couch') && query.block_state('cray:1') == 2",
+						"set_block_state": {
+							"cray:3": 1
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(-1, 0, 0, 'couch') && query.block_state('cray:1') == 2",
+						"set_block_state": {
+							"cray:2": 0
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(1, 0, 0, 'couch') && query.block_state('cray:1') == 2",
+						"set_block_state": {
+							"cray:3": 0
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(1, 0, 0, 'couch') && query.block_state('cray:1') == 3",
+						"set_block_state": {
+							"cray:2": 1
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(-1, 0, 0, 'couch') && query.block_state('cray:1') == 3",
+						"set_block_state": {
+							"cray:3": 1
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(1, 0, 0, 'couch') && query.block_state('cray:1') == 3",
+						"set_block_state": {
+							"cray:2": 0
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(-1, 0, 0, 'couch') && query.block_state('cray:1') == 3",
+						"set_block_state": {
+							"cray:3": 0
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, 1, 'couch') && query.block_state('cray:1') == 4",
+						"set_block_state": {
+							"cray:2": 1
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, -1, 'couch') && query.block_state('cray:1') == 4",
+						"set_block_state": {
+							"cray:3": 1
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(0, 0, 1, 'couch') && query.block_state('cray:1') == 4",
+						"set_block_state": {
+							"cray:2": 0
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(0, 0, -1, 'couch') && query.block_state('cray:1') == 4",
+						"set_block_state": {
+							"cray:3": 0
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, -1, 'couch') && query.block_state('cray:1') == 5",
+						"set_block_state": {
+							"cray:2": 1
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, 1, 'couch') && query.block_state('cray:1') == 5",
+						"set_block_state": {
+							"cray:3": 1
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(0, 0, -1, 'couch') && query.block_state('cray:1') == 5",
+						"set_block_state": {
+							"cray:2": 0
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(0, 0, 1, 'couch') && query.block_state('cray:1') == 5",
+						"set_block_state": {
+							"cray:3": 0
+						}
+					}
+				]
+			},
+			"rider": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon cfm:sit ~ ~ ~",
+								"execute @e[type=cfm:sit,c=1,r=2] ~~~ tp @s ~~~ facing @p"
+							]
+						},
+						"trigger": {
+							"event": "set_rider"
+						}
+					}
+				]
+			},
+			"set_rider": {
+				"run_command": {
+					"command": [
+						"ride @s start_riding @e [type=cfm:sit,c=1,r=2] teleport_rider"
+					],
+					"target": "other"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cray:1') == 2",
+				"components": {}
+			},
+			{
+				"condition": "query.block_state('cray:1') == 3",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cray:1') == 4",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cray:1') == 5",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "MrCrayfish´s Furniture Add-on (BP)",
+		"description": "MrCrayfish´s Furniture Mod comes to Bedrock in this incredible port, it includes almost all the blocks of the original version, including its functions (not all of them)",
+		"min_engine_version": [
+			1,
+			16,
+			210
+		],
+		"uuid": "604420b9-f4c3-4df2-9f09-4364486f1195",
+		"version": [
+			20,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "a247d4ba-785e-41b2-9fb5-acb42bbb1f49",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"version": [
+				1,
+				0,
+				0
+			],
+			"uuid": "8037b873-6f49-43e3-85a5-7202810321e9"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.4",
+				"1.8.5"
+			]
+		}
+	}
+}

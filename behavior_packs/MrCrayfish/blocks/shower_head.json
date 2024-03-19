@@ -1,0 +1,183 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:shower_head",
+			"states": {
+				"p:facing": [
+					0,
+					1,
+					2,
+					3
+				],
+				"p:water": [
+					false,
+					true
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('p:facing') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('p:facing') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('p:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('p:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_state('p:water') == true",
+				"components": {
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "water"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "nowater"
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('p:water') == false",
+				"components": {
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "nothing"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "e:toggle"
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "black_kitchen_counter_sink",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "e:toggle"
+			},
+			"minecraft:map_color": "#b8b8b0",
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 2,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:breathability": "air",
+			"minecraft:geometry": "geometry.shower_head",
+			"minecraft:aim_collision": {
+				"origin": [
+					-2.5,
+					2,
+					-2.5
+				],
+				"size": [
+					5,
+					5.3,
+					10
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-2.5,
+					2,
+					-2.5
+				],
+				"size": [
+					5,
+					5.3,
+					10
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "e:set.facing"
+			},
+			"minecraft:on_placed": {
+				"event": "e:add.detector"
+			},
+			"minecraft:loot": "loot_tables/shower_head.json",
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_bathroom"
+			}
+		},
+		"events": {
+			"e:set.facing": {
+				"set_block_state": {
+					"p:facing": "q.cardinal_facing_2d-2"
+				}
+			},
+			"e:add.detector": {
+				"run_command": {
+					"command": [
+						"summon cfm:detector ~~-0.02~"
+					]
+				}
+			},
+			"e:toggle": {
+				"set_block_state": {
+					"p:water": true
+				}
+			},
+			"water": {
+				"run_command": {
+					"command": [
+						"function waterdrops"
+					]
+				}
+			},
+			"nowater": {
+				"set_block_state": {
+					"p:water": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:granite_coffee_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "cfm:granite_coffee_table",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:red_present"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#C#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 14
+            },
+            "C": {
+                "item": "cfm:package"
+            }
+        },
+        "result": {
+            "item": "cfm:red_present",
+            "count": 1
+        }
+    }
+}

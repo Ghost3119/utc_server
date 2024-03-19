@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:andesite_chair"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 5
+            }
+        },
+        "result": {
+            "item": "cfm:andesite_chair",
+            "count": 1
+        }
+    }
+}

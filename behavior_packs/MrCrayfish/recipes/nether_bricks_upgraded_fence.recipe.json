@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:nether_bricks_upgraded_fence"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#N#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:nether_brick_fence"
+            },
+            "N": {
+                "item": "minecraft:nether_brick"
+            }
+        },
+        "result": {
+            "item": "cfm:nether_bricks_upgraded_fence",
+            "count": 8
+        }
+    }
+}

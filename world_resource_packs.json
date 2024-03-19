@@ -1,0 +1,19 @@
+
+[
+	
+	{
+		"pack_id" : "8037b873-6f49-43e3-85a5-7202810321e9",
+		"version" : [ 20, 0, 0 ]
+	},
+	
+	{
+		"pack_id" : "e684b463-aeac-4359-8489-7caaed17c23a",
+		"subpack" : "Heart + Health Bar",
+		"version" : [ 3, 6, 2 ]
+	},
+	
+	{
+		"pack_id" : "b17af4d5-486d-480e-8d1f-f864c9a33a20",
+		"version" : [ 1, 0, 0 ]
+	}
+]

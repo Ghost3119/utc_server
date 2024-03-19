@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:yellow_lamp"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#G#",
+            " O "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 4
+            },
+            "G": {
+                "item": "minecraft:glowstone"
+            },
+            "O": {
+                "item": "minecraft:obsidian"
+            }
+        },
+        "result": {
+            "item": "cfm:yellow_lamp",
+            "count": 1
+        }
+    }
+}

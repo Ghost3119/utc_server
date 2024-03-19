@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:cyan_curtains"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "g g",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 9
+            },
+            "g": {
+                "item": "minecraft:gold_ingot"
+            }
+        },
+        "result": {
+            "item": "cfm:cyan_curtains",
+            "count": 2
+        }
+    }
+}

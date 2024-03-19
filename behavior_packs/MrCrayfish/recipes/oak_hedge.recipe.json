@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oak_hedge"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:leaves"
+            }
+        },
+        "result": {
+            "item": "cfm:oak_hedge",
+            "count": 4
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:fairy_light"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "SMS"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:string"
+            },
+            "S": {
+                "item": "minecraft:stained_glass",
+                "data": 14
+            },
+            "M": {
+                "item": "minecraft:stained_glass",
+                "data": 13
+            }
+        },
+        "result": {
+            "item": "cfm:fairy_light",
+            "count": 1
+        }
+    }
+}

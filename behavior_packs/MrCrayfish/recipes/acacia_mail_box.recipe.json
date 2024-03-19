@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_mail_box"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#B#",
+            "PPP",
+            " P "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log2"
+            },
+            "B": {
+                "item": "minecraft:book"
+            },
+            "P": {
+                "item": "minecraft:planks",
+                "data": 4
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_mail_box",
+            "count": 1
+        }
+    }
+}

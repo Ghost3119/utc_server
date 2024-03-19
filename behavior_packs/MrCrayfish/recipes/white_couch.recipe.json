@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:white_couch"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool"
+            }
+        },
+        "result": {
+            "item": "cfm:white_couch",
+            "count": 1
+        }
+    }
+}

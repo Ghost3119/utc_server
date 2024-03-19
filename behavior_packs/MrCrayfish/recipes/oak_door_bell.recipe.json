@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oak_door_bell"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#S",
+            "L "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:noteblock"
+            },
+            "S": {
+                "item": "minecraft:stone_button"
+            },
+            "L": {
+                "item": "minecraft:log"
+            }
+        },
+        "result": {
+            "item": "cfm:oak_door_bell",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:modern_tv"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "iii",
+            "GGG",
+            "iRi"
+        ],
+        "key": {
+            "i": {
+                "item": "minecraft:iron_ingot"
+            },
+            "G": {
+                "item": "minecraft:glass_pane"
+            },
+            "R": {
+                "item": "minecraft:redstone"
+            }
+        },
+        "result": {
+            "item": "cfm:modern_tv",
+            "count": 1
+        }
+    }
+}

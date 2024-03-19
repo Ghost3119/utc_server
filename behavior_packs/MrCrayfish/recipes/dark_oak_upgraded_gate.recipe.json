@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "dark_oak_upgraded_gate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:dark_oak_fence_gate"
+            },
+            "L": {
+                "item": "minecraft:log2",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "cfm:dark_oak_upgraded_gate",
+            "count": 2
+        }
+    }
+}

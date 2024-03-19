@@ -1,0 +1,75 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.17.0",
+	"sound_definitions": {
+		"door_bell": {
+			"sounds": [
+				{
+					"name": "sounds/music/door_bell",
+					"stream": false
+				}
+			],
+			"category": "block"
+		},
+		"bin_open": {
+			"sounds": [
+				"sounds/music/bin_open"
+			],
+			"category": "block"
+		},
+		"bin_close": {
+			"sounds": [
+				"sounds/music/bin_close"
+			],
+			"category": "block"
+		},
+		"cabinet_open": {
+			"sounds": [
+				"sounds/music/cabinet_open"
+			],
+			"category": "block"
+		},
+		"cabinet_close": {
+			"sounds": [
+				"sounds/music/cabinet_close"
+			],
+			"category": "block"
+		},
+		"present_wrapped": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/present_wrapped"
+			]
+		},
+		"sizzle": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/sizzle"
+			]
+		},
+		"toaster_down": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/toaster_down"
+			]
+		},
+		"toaster_up": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/toaster_up"
+			]
+		},
+		"microwave_running": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/microwave_running"
+			]
+		},
+		"microwave_finish": {
+			"category": "block",
+			"sounds": [
+				"sounds/music/microwave_finish"
+			]
+		}
+	}
+}

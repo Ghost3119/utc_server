@@ -1,0 +1,165 @@
+//bridge-file-version: #36
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"category": "Nature",
+			"identifier": "cfm:mantel_piece",
+			"states": {
+				"cfm:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.7,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:flammable": {
+				"flame_odds": 1,
+				"burn_odds": 1
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_destroyed": {
+				"event": "remove:block",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chimney",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "step:on",
+				"target": "self"
+			},
+			"minecraft:on_step_off": {
+				"event": "step:off",
+				"target": "self"
+			},
+			"minecraft:on_placed": {
+				"event": "size:block",
+				"target": "self"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "random:tick",
+					"target": "self"
+				}
+			},
+			"minecraft:on_fall_on": {
+				"event": "fall:on",
+				"target": "self"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					10,
+					10
+				],
+				"on_tick": {
+					"event": "on_tick",
+					"target": "self"
+				}
+			},
+			"minecraft:geometry": "geometry.mantel_piece",
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_christmas_blocks"
+			},
+			"minecraft:loot": "loot_tables/mantel_piece.json",
+			"minecraft:on_player_placing": {
+				"event": "cfm:update_rotation"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					8,
+					0,
+					8
+				],
+				"size": [
+					-16,
+					16,
+					-5
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					8,
+					0,
+					8
+				],
+				"size": [
+					-16,
+					16,
+					-5
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "nothing"
+			}
+		},
+		"events": {
+			"remove:block": {},
+			"size:block": {},
+			"step:on": {},
+			"step:off": {},
+			"on_tick": {},
+			"random:tick": {},
+			"fall:on": {},
+			"cfm:update_rotation": {
+				"set_block_state": {
+					"cfm:block_rotation": "query.cardinal_facing_2d"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

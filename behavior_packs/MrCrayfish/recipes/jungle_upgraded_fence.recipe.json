@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:jungle_upgraded_fence"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#L#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:fence",
+                "data": 3
+            },
+            "L": {
+                "item": "minecraft:log",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:jungle_upgraded_fence",
+            "count": 8
+        }
+    }
+}

@@ -1,0 +1,57 @@
+//bridge-file-version: #6
+{
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"itempackage": {
+			"textures": [
+				"textures/items/itempackage"
+			]
+		},
+		"itembreadslice": {
+			"textures": [
+				"textures/items/itembreadslice"
+			]
+		},
+		"itemtoast": {
+			"textures": [
+				"textures/items/itemtoast"
+			]
+		},
+		"itemkebab": {
+			"textures": [
+				"textures/items/itemkebab"
+			]
+		},
+		"itemkebabcooked": {
+			"textures": [
+				"textures/items/itemkebabcooked"
+			]
+		},
+		"itemsausage": {
+			"textures": [
+				"textures/items/itemsausage"
+			]
+		},
+		"itemsausagecooked": {
+			"textures": [
+				"textures/items/itemsausagecooked"
+			]
+		},
+		"knife_item": {
+			"textures": [
+				"textures/items/knife_item"
+			]
+		},
+		"itemflesh": {
+			"textures": [
+				"textures/items/itemflesh"
+			]
+		},
+		"itemfleshcooked": {
+			"textures": [
+				"textures/items/itemfleshcooked"
+			]
+		}
+	}
+}

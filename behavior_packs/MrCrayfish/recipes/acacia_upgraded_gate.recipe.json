@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "acacia_upgraded_gate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:acacia_fence_gate"
+            },
+            "L": {
+                "item": "minecraft:log2"
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_upgraded_gate",
+            "count": 2
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:jungle_chair"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:jungle_chair",
+            "count": 1
+        }
+    }
+}

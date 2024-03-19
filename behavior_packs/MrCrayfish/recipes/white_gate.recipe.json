@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:white_gate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#B"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:fence_gate"
+            },
+            "B": {
+                "item": "minecraft:bone_meal"
+            }
+        },
+        "result": {
+            "item": "cfm:white_gate",
+            "count": 2
+        }
+    }
+}

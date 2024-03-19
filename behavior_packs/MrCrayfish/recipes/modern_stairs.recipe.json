@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:modern_stairs"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "i# ",
+            " i#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:concrete"
+            },
+            "i": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "cfm:modern_stairs",
+            "count": 4
+        }
+    }
+}

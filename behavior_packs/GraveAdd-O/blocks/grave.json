@@ -1,0 +1,88 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:block": {
+    "description": {
+      "identifier": "effect99:grave",
+      "menu_category": {
+        "category": "Construction"
+      },
+      "properties": {
+        "block:rotation": [ 0, 1, 2, 3 ],
+        "block:destructible": [ 0, 1 ]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_explosion": false,
+      "minecraft:light_emission": 0,
+      "minecraft:material_instances": {
+        "*": { "texture": "grave" }
+      },
+      "minecraft:selection_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 2, 16]
+      },
+      "minecraft:collision_box": {
+        "origin": [-8, 0, -8],
+        "size": [16, 4, 16]
+      },
+      "minecraft:map_color": "#7B7B7B",
+
+      "minecraft:geometry": {
+        "identifier": "geometry.grave"
+      },
+      "minecraft:on_player_placing": {
+        "event": "placeRotation"
+      },
+      "minecraft:on_interact": {
+        "event": "interact"
+      }
+    },
+    "events": {
+      "placeRotation": {
+        "set_block_state": {
+          "block:rotation": "q.cardinal_facing_2d-2"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "!q.block_property('block:destructible')",
+        "components": {
+          "minecraft:destructible_by_mining": {
+            "seconds_to_destroy": 1
+          }
+        }
+      },
+      {
+        "condition": "q.block_property('block:destructible')",
+        "components": {
+          "minecraft:destructible_by_mining": false
+        }
+      },
+      {
+        "condition": "!q.block_property('block:rotation')",
+        "components": {
+          "minecraft:transformation": { "rotation": [ 0, 180, 0 ] }
+        }
+      },
+      {
+        "condition": "q.block_property('block:rotation') == 1",
+        "components": {
+          "minecraft:transformation": { "rotation": [ 0, 0, 0 ] }
+        }
+      },
+      {
+        "condition": "q.block_property('block:rotation') == 2",
+        "components": {
+          "minecraft:transformation": { "rotation": [ 0, 270, 0 ] }
+        }
+      },
+      {
+        "condition": "q.block_property('block:rotation') == 3",
+        "components": {
+          "minecraft:transformation": { "rotation": [ 0, 90, 0 ] }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:blue_kitchen_counter",
+			"states": {
+				"cfm:n": [
+					false,
+					true
+				],
+				"cfm:s": [
+					false,
+					true
+				],
+				"cfm:w": [
+					false,
+					true
+				],
+				"cfm:e": [
+					false,
+					true
+				],
+				"cfm:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.counter",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blue_cooler",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:map_color": "#DD6418",
+			"minecraft:flammable": {
+				"burn_odds": 4,
+				"flame_odds": 3
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					12,
+					-8
+				],
+				"size": [
+					16,
+					15,
+					16
+				]
+			},
+			"tag:counter": {},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"event": "property"
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_kitchen_counter"
+			},
+			"minecraft:loot": "loot_tables/blue_kitchen_counter.json"
+		},
+		"events": {
+			"property": {
+				"sequence": [
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": false,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": false,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": true,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": false,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(0,0,-1,'counter') && q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": true,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(0,0,-1,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": false,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && q.block_neighbor_has_any_tag(0,0,1,'counter') && q.block_neighbor_has_any_tag(0,0,-1,'counter')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": true,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'counter') && q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(-1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(1,0,0,'counter')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && q.block_neighbor_has_any_tag(1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter') && !q.block_neighbor_has_any_tag(0,0,1,'counter')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'counter') && q.block_neighbor_has_any_tag(-1,0,0,'counter') && q.block_neighbor_has_any_tag(0,0,1,'counter') && !q.block_neighbor_has_any_tag(0,0,-1,'counter')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": true,
+							"cfm:s": false
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:lime_present"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#C#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 5
+            },
+            "C": {
+                "item": "cfm:package"
+            }
+        },
+        "result": {
+            "item": "cfm:lime_present",
+            "count": 1
+        }
+    }
+}

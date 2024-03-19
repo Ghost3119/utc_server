@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:birch_blinds"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "///",
+            "///"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log",
+                "data": 2
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "cfm:birch_blinds",
+            "count": 2
+        }
+    }
+}

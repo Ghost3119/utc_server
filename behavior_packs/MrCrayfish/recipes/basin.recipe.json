@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:basin"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#i#",
+            "QQQ",
+            " Q "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone_button"
+            },
+            "i": {
+                "item": "minecraft:iron_ingot"
+            },
+            "Q": {
+                "item": "minecraft:quartz_block"
+            }
+        },
+        "result": {
+            "item": "cfm:basin",
+            "count": 1
+        }
+    }
+}

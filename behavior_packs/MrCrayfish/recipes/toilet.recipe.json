@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:toilet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#S ",
+            "###",
+            " # "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:quartz_block"
+            },
+            "S": {
+                "item": "minecraft:stone_button"
+            }
+        },
+        "result": {
+            "item": "cfm:toilet",
+            "count": 1
+        }
+    }
+}

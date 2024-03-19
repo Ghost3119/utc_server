@@ -1,0 +1,436 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cfm:sit",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"kills": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.4
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"breathes_solids": true
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"seats": {
+					"position": [
+						0,
+						-0.1,
+						0
+					]
+				}
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "cfm:oak_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:gray_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:white_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:spruce_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:birch_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:jungle_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:acacia_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:dark_oak_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:stone_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:granite_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:diorite_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:andesite_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:white_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:orange_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:magenta_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_blue_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:yellow_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:lime_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:pink_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_gray_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:cyan_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:purple_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:blue_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:brown_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:green_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:red_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:black_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:toilet"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:white_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:orange_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:magenta_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_blue_clay_modern_couch"
+						},
+						"exited_block_event": {}
+					},
+					{
+						"block": {
+							"name": "cfm:yellow_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:lime_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:pink_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:gray_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_gray_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:cyan_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:purple_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:blue_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:brown_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:green_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:red_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:brown_clay_modern_couch"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:grand_chair"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "kill",
+						"filters": {
+							"test": "rider_count",
+							"value": 0
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"kill": {
+				"add": {
+					"component_groups": [
+						"kills"
+					]
+				}
+			}
+		}
+	}
+}

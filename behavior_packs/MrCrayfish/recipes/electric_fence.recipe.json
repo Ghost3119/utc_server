@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:electric_fence"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "iii",
+            "iCi",
+            "iRi"
+        ],
+        "key": {
+            "i": {
+                "item": "minecraft:iron_ingot"
+            },
+            "C": {
+                "item": "cfm:white_fence"
+            },
+            "R": {
+                "item": "minecraft:redstone_torch"
+            }
+        },
+        "result": {
+            "item": "cfm:electric_fence",
+            "count": 8
+        }
+    }
+}

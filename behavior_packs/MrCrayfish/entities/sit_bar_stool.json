@@ -1,0 +1,206 @@
+//bridge-file-version: #41
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cfm:sit_bar_stool",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"kills": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.4
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"breathes_solids": true
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"seats": {
+					"position": [
+						0,
+						0.1,
+						0
+					]
+				}
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "cfm:white_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:magenta_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:orange_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_blue_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:yellow_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:lime_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:pink_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:gray_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_gray_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:cyan_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:purple_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:blue_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:brown_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:green_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:red_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:black_clay_bar_stool"
+						},
+						"exited_block_event": {
+							"event": "kills"
+						}
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "kills",
+						"filters": {
+							"test": "rider_count",
+							"value": 0
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"kills": {
+				"add": {
+					"component_groups": [
+						"kills"
+					]
+				}
+			}
+		}
+	}
+}

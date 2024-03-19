@@ -1,0 +1,454 @@
+//bridge-file-version: #148
+{
+	"format_version": "1.20.10",
+	"minecraft:block": {
+		"description": {
+			"category": "Nature",
+			"identifier": "cfm:grill",
+			"states": {
+				"cfm:property": [
+					false,
+					true
+				],
+				"block:rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"cfm:charcoal": [
+					0,
+					1,
+					2,
+					3
+				],
+				"cfm:beef": [
+					false,
+					true
+				],
+				"cfm:cooked_beef": [
+					false,
+					true
+				],
+				"cfm:sausage": [
+					false,
+					true
+				],
+				"cfm:cooked_sausage": [
+					false,
+					true
+				],
+				"cfm:raw_kebab": [
+					false,
+					true
+				],
+				"cfm:cooked_kebab": [
+					false,
+					true
+				]
+			},
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_bathroom"
+			}
+		},
+		"components": {
+			"minecraft:geometry": {
+				"identifier": "geometry.grill",
+				"bone_visibility": {
+					"sausage": "query.block_state('cfm:sausage') == true",
+					"cooked_sausage": "query.block_state('cfm:cooked_sausage') == true",
+					"charcoal1": "query.block_state('cfm:charcoal') == 1 || query.block_state('cfm:charcoal') == 2 || query.block_state('cfm:charcoal') == 3",
+					"charcoal2": "query.block_state('cfm:charcoal') == 2 || query.block_state('cfm:charcoal') == 3",
+					"charcoal3": "query.block_state('cfm:charcoal') == 3",
+					"beef": "query.block_state('cfm:beef') == true",
+					"cooked_beef": "query.block_state('cfm:cooked_beef') == true",
+					"raw_kebab": "query.block_state('cfm:raw_kebab') == true",
+					"cooked_kebab": "query.block_state('cfm:cooked_kebab') == true"
+				}
+			},
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:flammable": {
+				"flame_odds": 1,
+				"burn_odds": 1
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "remove:block",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "grill",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "step:on",
+				"target": "self"
+			},
+			"minecraft:on_step_off": {
+				"event": "step:off",
+				"target": "self"
+			},
+			"minecraft:on_placed": {
+				"event": "size:block",
+				"target": "self"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "charcoal_minus"
+				}
+			},
+			"minecraft:on_fall_on": {
+				"event": "fall:on",
+				"target": "self"
+			},
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"interval_range": [
+					10,
+					10
+				],
+				"on_tick": {
+					"event": "on_tick",
+					"target": "self"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "block:rotation"
+			},
+			"minecraft:loot": "loot_tables/grill.json",
+			"minecraft:on_interact": {
+				"event": "food_charcoal"
+			}
+		},
+		"events": {
+			"remove:block": {},
+			"size:block": {},
+			"step:on": {},
+			"step:off": {},
+			"on_tick": {},
+			"random:tick": {},
+			"fall:on": {},
+			"block:rotation": {
+				"set_block_state": {
+					"block:rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"food_charcoal": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'charcoal' && query.block_state('cfm:charcoal') != 3",
+						"set_block_state": {
+							"cfm:charcoal": "(query.block_state('cfm:charcoal')<4) ? query.block_state('cfm:charcoal') + 1 : 3"
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'beef'",
+						"set_block_state": {
+							"cfm:beef": true
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'sausage'",
+						"set_block_state": {
+							"cfm:sausage": true
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'raw_kebab'",
+						"set_block_state": {
+							"cfm:raw_kebab": true
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_state('cfm:cooked_beef') == true",
+						"spawn_loot": {
+							"table": "loot_tables/cooked_beef.json"
+						},
+						"set_block_state": {
+							"cfm:cooked_beef": false
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:cooked_sausage') == true",
+						"spawn_loot": {
+							"table": "loot_tables/cooked_sausage.json"
+						},
+						"set_block_state": {
+							"cfm:cooked_sausage": false
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:cooked_kebab') == true",
+						"spawn_loot": {
+							"table": "loot_tables/cooked_kebab.json"
+						},
+						"set_block_state": {
+							"cfm:cooked_kebab": false
+						}
+					}
+				]
+			},
+			"charcoal_minus": {
+				"randomize": [
+					{
+						"weight": 1,
+						"set_block_state": {
+							"cfm:charcoal": "(query.block_state('cfm:charcoal')<4) ? query.block_state('cfm:charcoal') - 1 : 0"
+						}
+					},
+					{
+						"weight": 2
+					}
+				]
+			},
+			"food": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"set_block_state": {
+									"cfm:cooked_beef": true,
+									"cfm:beef": false
+								},
+								"condition": "query.block_state('cfm:beef') == true"
+							},
+							{
+								"weight": 14,
+								"condition": "query.block_state('cfm:beef') == true"
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"set_block_state": {
+									"cfm:cooked_sausage": true,
+									"cfm:sausage": false
+								},
+								"condition": "query.block_state('cfm:sausage') == true"
+							},
+							{
+								"weight": 14,
+								"condition": "query.block_state('cfm:sausage') == true"
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"condition": "query.block_state('cfm:raw_kebab') == true",
+								"set_block_state": {
+									"cfm:cooked_kebab": true,
+									"cfm:raw_kebab": false
+								}
+							},
+							{
+								"weight": 14,
+								"condition": "query.block_state('cfm:raw_kebab') == true"
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:basic_flame_particle ~ ~0.5 ~"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:basic_flame_particle ~ ~0.5 ~0.25"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:basic_flame_particle ~ ~0.5 ~-0.25"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:basic_flame_particle ~0.25 ~0.5 ~0"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:basic_flame_particle ~-0.25 ~0.5 ~0"
+									]
+								}
+							}
+						]
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound sizzle @a[r=15] ~ ~ ~"
+							]
+						}
+					}
+				]
+			},
+			"charcoal": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'charcoal'",
+						"set_block_state": {
+							"cfm:charcoal": "(query.block_state('cfm:charcoal')<4) ? query.block_state('cfm:charcoal') + 1 : 3"
+						},
+						"decrement_stack": {}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('block:rotation') == 2",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('block:rotation') == 3",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('block:rotation') == 4",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('block:rotation') == 5",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:beef') == true && query.block_state('cfm:charcoal') == 1 || query.block_state('cfm:charcoal') == 2 || query.block_state('cfm:charcoal') == 3",
+				"components": {
+					"minecraft:queued_ticking": {
+						"looping": true,
+						"interval_range": [
+							20,
+							20
+						],
+						"on_tick": {
+							"event": "food"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "charcoal"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:cooked_beef') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "food_charcoal"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:sausage') == true && query.block_state('cfm:charcoal') == 1 || query.block_state('cfm:charcoal') == 2 || query.block_state('cfm:charcoal') == 3",
+				"components": {
+					"minecraft:queued_ticking": {
+						"looping": true,
+						"interval_range": [
+							20,
+							20
+						],
+						"on_tick": {
+							"event": "food"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "charcoal"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:cooked_sausage') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "food_charcoal"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:raw_kebab') == true && query.block_state('cfm:charcoal') == 1 || query.block_state('cfm:charcoal') == 2 || query.block_state('cfm:charcoal') == 3",
+				"components": {
+					"minecraft:queued_ticking": {
+						"looping": true,
+						"interval_range": [
+							20,
+							20
+						],
+						"on_tick": {
+							"event": "food"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "charcoal"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:cooked_kebab') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "food_charcoal"
+					}
+				}
+			}
+		]
+	}
+}

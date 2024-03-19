@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:birch_door_bell"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#S",
+            "L "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:noteblock"
+            },
+            "S": {
+                "item": "minecraft:stone_button"
+            },
+            "L": {
+                "item": "minecraft:log",
+                "data": 2
+            }
+        },
+        "result": {
+            "item": "cfm:birch_door_bell",
+            "count": 1
+        }
+    }
+}

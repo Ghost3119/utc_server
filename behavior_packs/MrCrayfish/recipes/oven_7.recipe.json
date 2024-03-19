@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oven_7"
+        },
+        "tags": [
+            "cfm_oven"
+        ],
+        "pattern": [
+            "#"
+        ],
+        "key": {
+            "#": {
+                "item": "cfm:flesh"
+            }
+        },
+        "result": {
+            "item": "cfm:cooked_flesh",
+            "count": 1
+        }
+    }
+}

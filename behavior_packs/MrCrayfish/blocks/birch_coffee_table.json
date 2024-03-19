@@ -1,0 +1,401 @@
+//bridge-file-version: #34
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:birch_coffee_table",
+			"states": {
+				"cfm:n": [
+					false,
+					true
+				],
+				"cfm:s": [
+					false,
+					true
+				],
+				"cfm:w": [
+					false,
+					true
+				],
+				"cfm:e": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.coffee_table",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "birch_table",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:map_color": "#DD6418",
+			"minecraft:flammable": {
+				"burn_odds": 4,
+				"flame_odds": 3
+			},
+			"tag:coffee_table": {},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"event": "property"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_coffee_table"
+			},
+			"minecraft:loot": "loot_tables/birch_coffee_table.json"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == false && query.block_state('cfm:w') == false && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table2"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == false && query.block_state('cfm:s') == true && query.block_state('cfm:w') == false && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table3"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == true && query.block_state('cfm:s') == false && query.block_state('cfm:n') == false && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table5",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:e') == true && query.block_state('cfm:s') == false && query.block_state('cfm:n') == false && query.block_state('cfm:w') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table6",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == true && query.block_state('cfm:w') == false && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == false && query.block_state('cfm:w') == true && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table9"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == false && query.block_state('cfm:w') == false && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table8"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == true && query.block_state('cfm:w') == true && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == true && query.block_state('cfm:w') == true && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == false && query.block_state('cfm:w') == true && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:n') == true && query.block_state('cfm:s') == true && query.block_state('cfm:w') == false && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == true && query.block_state('cfm:s') == true && query.block_state('cfm:n') == false && query.block_state('cfm:e') == false",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table10",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == false && query.block_state('cfm:s') == true && query.block_state('cfm:n') == false && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table7",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == true && query.block_state('cfm:s') == true && query.block_state('cfm:n') == false && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == true && query.block_state('cfm:s') == false && query.block_state('cfm:n') == false && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:w') == true && query.block_state('cfm:s') == false && query.block_state('cfm:n') == true && query.block_state('cfm:e') == true",
+				"components": {
+					"minecraft:geometry": "geometry.coffee_table4",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "property"
+						}
+					}
+				}
+			}
+		],
+		"events": {
+			"property": {
+				"sequence": [
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": false,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": false,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": true,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": false,
+							"cfm:w": false,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": true,
+							"cfm:e": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": false,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && q.block_neighbor_has_any_tag(0,0,-1,'coffee_table')",
+						"set_block_state": {
+							"cfm:n": true,
+							"cfm:s": true,
+							"cfm:w": true,
+							"cfm:e": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(-1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": false,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(1,0,0,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": false,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": true
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,1,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": false,
+							"cfm:s": false
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(-1,0,0,'coffee_table') && q.block_neighbor_has_any_tag(0,0,1,'coffee_table') && !q.block_neighbor_has_any_tag(0,0,-1,'coffee_table')",
+						"set_block_state": {
+							"cfm:w": true,
+							"cfm:e": true,
+							"cfm:n": true,
+							"cfm:s": false
+						}
+					}
+				]
+			}
+		}
+	}
+}

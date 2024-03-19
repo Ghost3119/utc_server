@@ -1,0 +1,24 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_hedge"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:leaves2"
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_hedge",
+            "count": 4
+        }
+    }
+}

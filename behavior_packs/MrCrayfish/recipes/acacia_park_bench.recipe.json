@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_park_bench"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###",
+            "L L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 4
+            },
+            "L": {
+                "item": "minecraft:log2"
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_park_bench",
+            "count": 2
+        }
+    }
+}

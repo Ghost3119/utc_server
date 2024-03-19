@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:mantel_piece"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "# #",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:brick_block"
+            }
+        },
+        "result": {
+            "item": "cfm:mantel_piece",
+            "count": 1
+        }
+    }
+}

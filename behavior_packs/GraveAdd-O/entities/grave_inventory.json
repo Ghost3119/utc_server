@@ -1,0 +1,71 @@
+{
+  "minecraft:entity": {
+    "format_version": "1.13.0",
+    "description": {
+      "identifier": "entity:grave_inventory",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "spawnItem": {
+        "minecraft:transformation": {
+          "into": "entity:grave_inventory<despawn>",
+          "drop_inventory": true,
+          "drop_equipment": true,
+          "preserve_equipment": false
+        }
+      },
+      "despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "inanimate" ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:inventory": {
+        "inventory_size": 42
+      },
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      },
+      "minecraft:persistent": {
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": true
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          { "filters": { "test": "in_block", "operator": "!=", "value": "grave" }, "event": "spawnItem" }
+        ]
+      }
+    },
+    "events": {
+      "spawnItem": {
+        "add": { "component_groups": "spawnItem" }
+      },
+      "despawn": {
+        "add": { "component_groups": "despawn" }
+      }
+    }
+  }
+}

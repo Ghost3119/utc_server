@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:lime_counter_drawer"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "CUC",
+            "CCC"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 5
+            },
+            "C": {
+                "item": "minecraft:concrete"
+            },
+            "U": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:lime_counter_drawer",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:toaster"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#I#",
+            "#P#",
+            "WWW"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:quartz_block"
+            },
+            "I": {
+                "item": "minecraft:iron_bars"
+            },
+            "P": {
+                "item": "minecraft:piston",
+                "data": 0
+            },
+            "W": {
+                "item": "minecraft:wool",
+                "data": 15
+            }
+        },
+        "result": {
+            "item": "cfm:toaster",
+            "count": 1
+        }
+    }
+}

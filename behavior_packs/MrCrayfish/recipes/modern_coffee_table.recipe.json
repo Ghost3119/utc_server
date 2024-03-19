@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:modern_coffee_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "C C"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:concrete"
+            },
+            "C": {
+                "item": "minecraft:concrete",
+                "data": 8
+            }
+        },
+        "result": {
+            "item": "cfm:modern_coffee_table",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,224 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"states": {
+				"cfm:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"cfm:inventory": [
+					0,
+					1,
+					2
+				]
+			},
+			"identifier": "cfm:yellow_counter_drawer"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:inventory') == 1",
+				"components": {
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:pick_collision": false,
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							5,
+							5
+						],
+						"on_tick": {
+							"event": "close"
+						}
+					},
+					"minecraft:on_placed": {
+						"event": "nothing"
+					},
+					"minecraft:on_interact": {
+						"event": "nothing"
+					},
+					"minecraft:geometry": "geometry.counter_drawer_open"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:inventory') == 2",
+				"components": {
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "open",
+						"target": "self"
+					},
+					"minecraft:geometry": "geometry.counter_drawer",
+					"minecraft:on_placed": {
+						"event": "nothing"
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "cfm:update_rotation"
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "yellow_counter_drawer",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.counter_drawer",
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "inventory"
+			},
+			"minecraft:on_interact": {
+				"event": "open"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_counter_drawer"
+			},
+			"minecraft:loot": "loot_tables/yellow_counter_drawer.json"
+		},
+		"events": {
+			"cfm:update_rotation": {
+				"set_block_state": {
+					"cfm:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"open": {
+				"run_command": {
+					"command": [
+						"playsound block.barrel.open @a[r=50] ~~~"
+					]
+				},
+				"set_block_state": {
+					"cfm:inventory": 1
+				}
+			},
+			"close": {
+				"set_block_state": {
+					"cfm:inventory": 2
+				},
+				"run_command": {
+					"command": [
+						"playsound block.barrel.open @a[r=50] ~~~"
+					]
+				}
+			},
+			"inventory": {
+				"run_command": {
+					"command": [
+						"summon cfm:inventory",
+						"summon cfm:placeholder",
+						"summon cfm:placeholder ~1~~",
+						"summon cfm:placeholder ~-1~~",
+						"summon cfm:placeholder ~~~1",
+						"summon cfm:placeholder ~~~-1"
+					]
+				}
+			}
+		}
+	}
+}

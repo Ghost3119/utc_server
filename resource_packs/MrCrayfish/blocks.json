@@ -1,0 +1,830 @@
+//bridge-file-version: #263
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"cfm:gray_couch": {
+		"sound": "cloth"
+	},
+	"cfm:oak_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:white_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:oak_chair": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_oak": {
+		"sound": "wood"
+	},
+	"cfm:white_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:white_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:spruce_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:birch_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:jungle_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:acacia_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:darkoak_cabinet": {
+		"sound": "wood"
+	},
+	"cfm:stone_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:granite_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:diorite_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:andesite_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:white_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:orange_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:magenta_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:yellow_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:green_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:pink_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:brown_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:cyan_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:purpure_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:blue_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:gray_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:light_green_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:red_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:black_terracotta_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:bedside_cabinet_spruce": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_birch": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_jungle": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_acacia": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_dark_oak": {
+		"sound": "wood"
+	},
+	"cfm:bedside_cabinet_stone": {
+		"sound": "stone"
+	},
+	"cfm:bedside_cabinet_granite": {
+		"sound": "stone"
+	},
+	"cfm:bedside_cabinet_diorite": {
+		"sound": "stone"
+	},
+	"cfm:bedside_cabinet_andesite": {
+		"sound": "stone"
+	},
+	"cfm:spruce_chair": {
+		"sound": "wood"
+	},
+	"cfm:birch_chair": {
+		"sound": "wood"
+	},
+	"cfm:jungle_chair": {
+		"sound": "wood"
+	},
+	"cfm:acacia_chair": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_chair": {
+		"sound": "wood"
+	},
+	"cfm:stone_chair": {
+		"sound": "stone"
+	},
+	"cfm:granite_chair": {
+		"sound": "stone"
+	},
+	"cfm:diorite_chair": {
+		"sound": "stone"
+	},
+	"cfm:andesite_chair": {
+		"sound": "stone"
+	},
+	"cfm:orange_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:magenta_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:light_blue_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:yellow_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:lime_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:pink_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:gray_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:light_gray_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:cyan_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:purple_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:blue_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:brown_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:green_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:red_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:black_lamp": {
+		"sound": "cloth"
+	},
+	"cfm:orange_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:magenta_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:yellow_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:lime_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:pink_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:gray_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:cyan_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:purple_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:blue_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:brown_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:green_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:red_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:black_clay_bar_stool": {
+		"sound": "stone"
+	},
+	"cfm:oak_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:spruce_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:birch_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:jungle_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:acacia_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_mail_box": {
+		"sound": "wood"
+	},
+	"cfm:oak_table": {
+		"sound": "wood"
+	},
+	"cfm:spruce_table": {
+		"sound": "wood"
+	},
+	"cfm:birch_table": {
+		"sound": "wood"
+	},
+	"cfm:jungle_table": {
+		"sound": "wood"
+	},
+	"cfm:acacia_table": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_table": {
+		"sound": "wood"
+	},
+	"cfm:stone_table": {
+		"sound": "stone"
+	},
+	"cfm:granite_table": {
+		"sound": "stone"
+	},
+	"cfm:diorite_table": {
+		"sound": "stone"
+	},
+	"cfm:andesite_table": {
+		"sound": "stone"
+	},
+	"cfm:oak_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:acacia_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:andesite_coffee_table": {
+		"sound": "stone"
+	},
+	"cfm:birch_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:diorite_coffee_table": {
+		"sound": "stone"
+	},
+	"cfm:granite_coffee_table": {
+		"sound": "stone"
+	},
+	"cfm:jungle_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:spruce_coffee_table": {
+		"sound": "wood"
+	},
+	"cfm:stone_coffee_table": {
+		"sound": "stone"
+	},
+	"cfm:oak_blinds": {
+		"sound": "wood"
+	},
+	"cfm:spruce_blinds": {
+		"sound": "wood"
+	},
+	"cfm:birch_blinds": {
+		"sound": "wood"
+	},
+	"cfm:jungle_blinds": {
+		"sound": "wood"
+	},
+	"cfm:acacia_blinds": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_blinds": {
+		"sound": "wood"
+	},
+	"cfm:white_cooler": {
+		"sound": "stone"
+	},
+	"cfm:orange_cooler": {
+		"sound": "stone"
+	},
+	"cfm:magenta_cooler": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_cooler": {
+		"sound": "stone"
+	},
+	"cfm:yellow_cooler": {
+		"sound": "stone"
+	},
+	"cfm:lime_cooler": {
+		"sound": "stone"
+	},
+	"cfm:pink_cooler": {
+		"sound": "stone"
+	},
+	"cfm:gray_cooler": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_cooler": {
+		"sound": "stone"
+	},
+	"cfm:cyan_cooler": {
+		"sound": "stone"
+	},
+	"cfm:purple_cooler": {
+		"sound": "stone"
+	},
+	"cfm:blue_cooler": {
+		"sound": "stone"
+	},
+	"cfm:brown_cooler": {
+		"sound": "stone"
+	},
+	"cfm:green_cooler": {
+		"sound": "stone"
+	},
+	"cfm:red_cooler": {
+		"sound": "stone"
+	},
+	"cfm:black_cooler": {
+		"sound": "stone"
+	},
+	"cfm:white_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:orange_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:magenta_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:yellow_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:lime_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:pink_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:gray_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:cyan_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:purple_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:blue_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:brown_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:green_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:red_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:black_kitchen_counter_sink": {
+		"sound": "stone"
+	},
+	"cfm:white_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:orange_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:magenta_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:yellow_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:lime_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:pink_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:gray_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:cyan_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:purple_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:blue_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:brown_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:green_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:red_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:black_counter_drawer": {
+		"sound": "stone"
+	},
+	"cfm:white_couch": {
+		"sound": "cloth"
+	},
+	"cfm:orange_couch": {
+		"sound": "cloth"
+	},
+	"cfm:magenta_couch": {
+		"sound": "cloth"
+	},
+	"cfm:light_blue_couch": {
+		"sound": "cloth"
+	},
+	"cfm:yellow_couch": {
+		"sound": "cloth"
+	},
+	"cfm:lime_couch": {
+		"sound": "cloth"
+	},
+	"cfm:pink_couch": {
+		"sound": "cloth"
+	},
+	"cfm:light_gray_couch": {
+		"sound": "cloth"
+	},
+	"cfm:cyan_couch": {
+		"sound": "cloth"
+	},
+	"cfm:purple_couch": {
+		"sound": "cloth"
+	},
+	"cfm:blue_couch": {
+		"sound": "cloth"
+	},
+	"cfm:brown_couch": {
+		"sound": "cloth"
+	},
+	"cfm:green_couch": {
+		"sound": "cloth"
+	},
+	"cfm:red_couch": {
+		"sound": "cloth"
+	},
+	"cfm:black_couch": {
+		"sound": "cloth"
+	},
+	"cfm:white_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:orange_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:magenta_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:light_blue_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:yellow_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:lime_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:pink_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:gray_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:light_gray_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:cyan_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:purple_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:blue_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:brown_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:green_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:red_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:black_curtains": {
+		"sound": "cloth"
+	},
+	"cfm:wall_cabinet": {
+		"sound": "stone"
+	},
+	"cfm:shower": {
+		"sound": "stone"
+	},
+	"cfm:bin": {
+		"sound": "anvil"
+	},
+	"cfm:ceiling_light": {
+		"sound": "glass"
+	},
+	"cfm:orange_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:magenta_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:yellow_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:lime_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:pink_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:gray_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:cyan_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:purple_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:blue_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:brown_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:green_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:red_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:black_clay_modern_couch": {
+		"sound": "stone"
+	},
+	"cfm:modern_tv": {
+		"sound": "anvil"
+	},
+	"cfm:oak_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:spruce_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:birch_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:jungle_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:acacia_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_upgraded_fence": {
+		"sound": "wood"
+	},
+	"cfm:nether_bricks_upgraded_fence": {
+		"sound": "stone"
+	},
+	"cfm:oak_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:spruce_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:birch_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:jungle_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:acacia_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_upgraded_gate": {
+		"sound": "wood"
+	},
+	"cfm:oak_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:spruce_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:birch_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:jungle_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:acacia_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_park_bench": {
+		"sound": "wood"
+	},
+	"cfm:oak_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:spruce_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:birch_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:jungle_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:acacia_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_door_bell": {
+		"sound": "wood"
+	},
+	"cfm:fridge": {
+		"sound": "stone"
+	},
+	"cfm:acacia_hedge": {
+		"sound": "grass"
+	},
+	"cfm:modern_texture": {
+		"sound": "stone"
+	},
+	"cfm:white_fence": {
+		"sound": "stone"
+	},
+	"cfm:electric_fence": {
+		"sound": "anvil"
+	},
+	"cfm:white_present": {
+		"sound": "cloth"
+	},
+	"cfm:christmas_tree": {
+		"sound": "wood"
+	},
+	"cfm:chimney": {
+		"sound": "stone"
+	},
+	"cfm:candle": {
+		"sound": "stone"
+	},
+	"cfm:grand_chair": {
+		"sound": "wood"
+	},
+	"cfm:wreath": {
+		"sound": "grass"
+	},
+	"cfm:fairy_light": {
+		"sound": "glass"
+	},
+	"cfm:oak_desk": {
+		"sound": "wood"
+	},
+	"cfm:acacia_desk": {
+		"sound": "wood"
+	},
+	"cfm:andesite_desk": {
+		"sound": "stone"
+	},
+	"cfm:birch_desk": {
+		"sound": "wood"
+	},
+	"cfm:dark_oak_desk": {
+		"sound": "wood"
+	},
+	"cfm:diorite_desk": {
+		"sound": "stone"
+	},
+	"cfm:granite_desk": {
+		"sound": "stone"
+	},
+	"cfm:jungle_desk": {
+		"sound": "wood"
+	},
+	"cfm:spruce_desk": {
+		"sound": "wood"
+	},
+	"cfm:stone_desk": {
+		"sound": "stone"
+	},
+	"cfm:white_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:black_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:blue_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:brown_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:cyan_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:gray_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:green_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:light_blue_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:light_gray_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:lime_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:magenta_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:orange_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:pink_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:purple_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:red_digital_clock": {
+		"sound": "stone"
+	},
+	"cfm:yellow_digital_clock": {
+		"sound": "stone"
+	}
+}

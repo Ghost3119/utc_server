@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:orange_kitchen_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "SCS",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:concrete"
+            },
+            "S": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 1
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:orange_terracotta_cabinet",
+            "count": 1
+        }
+    }
+}

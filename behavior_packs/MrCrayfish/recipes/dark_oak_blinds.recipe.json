@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:dark_oak_blinds"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "///",
+            "///"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log2",
+                "data": 1
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "cfm:dark_oak_blinds",
+            "count": 2
+        }
+    }
+}

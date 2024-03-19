@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:orange_door_mat"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:carpet",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "cfm:orange_door_mat",
+            "count": 1
+        }
+    }
+}

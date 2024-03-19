@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:pink_kitchen_counter"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "CCC",
+            "CCC"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 6
+            },
+            "C": {
+                "item": "minecraft:concrete"
+            }
+        },
+        "result": {
+            "item": "cfm:pink_kitchen_counter",
+            "count": 1
+        }
+    }
+}

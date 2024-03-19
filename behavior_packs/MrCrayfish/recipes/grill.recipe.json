@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:grill"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#I#",
+            "S#S",
+            "SIS"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 14
+            },
+            "I": {
+                "item": "minecraft:iron_bars"
+            },
+            "S": {
+                "item": "minecraft:stone"
+            }
+        },
+        "result": {
+            "item": "cfm:grill",
+            "count": 1
+        }
+    }
+}

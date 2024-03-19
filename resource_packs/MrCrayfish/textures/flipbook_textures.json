@@ -1,0 +1,14 @@
+//bridge-file-version: #5
+[
+	{
+		"ticks_per_frame": 20,
+		"blend_frames": false,
+		"atlas_tile": "fairy_light",
+		"flipbook_texture": "textures/blocks/fairy_light/fairy_light",
+		"frames": [
+			0,
+			1
+		]
+	},
+	{}
+]

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:birch_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            " # ",
+            " # "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 2
+            }
+        },
+        "result": {
+            "item": "cfm:birch_table",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:white_lamp"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#G#",
+            " O "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool"
+            },
+            "G": {
+                "item": "minecraft:glowstone"
+            },
+            "O": {
+                "item": "minecraft:obsidian"
+            }
+        },
+        "result": {
+            "item": "cfm:white_lamp",
+            "count": 1
+        }
+    }
+}

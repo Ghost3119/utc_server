@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:raw_kebab"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "  /",
+            " C ",
+            "/  "
+        ],
+        "key": {
+            "/": {
+                "item": "minecraft:stick"
+            },
+            "C": {
+                "item": "minecraft:chicken"
+            }
+        },
+        "result": {
+            "item": "cfm:raw_kebab",
+            "count": 2
+        }
+    }
+}

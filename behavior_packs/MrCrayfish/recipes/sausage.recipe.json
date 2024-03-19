@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:sausage"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "  #",
+            " # ",
+            "#  "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:beef"
+            }
+        },
+        "result": {
+            "item": "cfm:sausage",
+            "count": 16
+        }
+    }
+}

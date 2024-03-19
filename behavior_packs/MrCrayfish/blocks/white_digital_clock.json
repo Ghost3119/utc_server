@@ -1,0 +1,225 @@
+//bridge-file-version: #137
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"category": "Nature",
+			"identifier": "cfm:white_digital_clock",
+			"states": {
+				"cfm:rotation": [
+					0,
+					1,
+					2,
+					3
+				],
+				"cfm:time": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.7,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:flammable": {
+				"flame_odds": 1,
+				"burn_odds": 1
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_player_destroyed": {
+				"event": "remove:block",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "white_digital_clock",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "step:on",
+				"target": "self"
+			},
+			"minecraft:on_step_off": {
+				"event": "step:off",
+				"target": "self"
+			},
+			"minecraft:on_placed": {
+				"event": "size:block",
+				"target": "self"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "random:tick",
+					"target": "self"
+				}
+			},
+			"minecraft:on_fall_on": {
+				"event": "fall:on",
+				"target": "self"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"event": "on_tick",
+					"target": "self"
+				}
+			},
+			"minecraft:geometry": "geometry.clock_0600",
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_clock"
+			},
+			"minecraft:loot": "loot_tables/white_digital_clock.json",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-1
+				],
+				"size": [
+					8,
+					5,
+					3
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-1
+				],
+				"size": [
+					8,
+					5,
+					3
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "block:rotation"
+			},
+			"minecraft:on_interact": {
+				"event": "b"
+			}
+		},
+		"events": {
+			"remove:block": {},
+			"size:block": {},
+			"step:on": {},
+			"step:off": {},
+			"random:tick": {},
+			"fall:on": {},
+			"block:rotation": {
+				"set_block_state": {
+					"cfm:rotation": "query.cardinal_facing_2d-2"
+				}
+			},
+			"a": {
+				"set_block_state": {
+					"cfm:time": 0
+				}
+			},
+			"b": {
+				"set_block_state": {
+					"cfm:time": 1
+				}
+			},
+			"c": {
+				"set_block_state": {
+					"cfm:time": 2
+				}
+			},
+			"d": {
+				"set_block_state": {
+					"cfm:time": 3
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:time') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.clock_0600",
+					"minecraft:on_interact": {
+						"event": "b"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:time') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.clock_1200",
+					"minecraft:on_interact": {
+						"event": "c"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:time') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.clock_1800",
+					"minecraft:on_interact": {
+						"event": "d"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:time') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.clock_2400",
+					"minecraft:on_interact": {
+						"event": "a"
+					}
+				}
+			}
+		]
+	}
+}

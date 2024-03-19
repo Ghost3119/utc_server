@@ -1,0 +1,103 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:black_kitchen_counter",
+			"states": {
+				"cfm:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.counter",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "black_cooler",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:map_color": "#DD6418",
+			"minecraft:flammable": {
+				"burn_odds": 4,
+				"flame_odds": 3
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					12,
+					-8
+				],
+				"size": [
+					16,
+					15,
+					16
+				]
+			},
+			"tag:counter": {},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_kitchen_counter"
+			},
+			"minecraft:loot": "loot_tables/black_kitchen_counter.json",
+			"minecraft:on_player_placing": {
+				"event": "cfm:update_rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"cfm:update_rotation": {
+				"set_block_state": {
+					"cfm:block_rotation": "query.cardinal_facing_2d"
+				}
+			}
+		}
+	}
+}

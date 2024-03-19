@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:yellow_kitchen_counter_sink"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#C#",
+            "OOO",
+            "OOO"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 4
+            },
+            "C": {
+                "item": "cfm:basin"
+            },
+            "O": {
+                "item": "minecraft:concrete"
+            }
+        },
+        "result": {
+            "item": "cfm:yellow_kitchen_counter_sink",
+            "count": 1
+        }
+    }
+}

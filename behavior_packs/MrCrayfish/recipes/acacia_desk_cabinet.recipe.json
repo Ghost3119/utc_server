@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_desk_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "PCP",
+            "P P"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log2"
+            },
+            "P": {
+                "item": "minecraft:planks",
+                "data": 4
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_desk_cabinet",
+            "count": 1
+        }
+    }
+}

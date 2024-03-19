@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:spruce_blinds"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "///",
+            "///"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log",
+                "data": 1
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "cfm:spruce_blinds",
+            "count": 2
+        }
+    }
+}

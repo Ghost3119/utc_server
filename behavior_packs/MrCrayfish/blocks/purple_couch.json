@@ -1,0 +1,518 @@
+//bridge-file-version: #44
+{
+	"format_version": "1.20.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:purple_couch",
+			"states": {
+				"cfm:connect": [
+					0,
+					1,
+					2,
+					3,
+					4
+				],
+				"cfm:rotation": [
+					0,
+					1,
+					2,
+					3
+				]
+			},
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_couch"
+			}
+		},
+		"components": {
+			"minecraft:geometry": {
+				"identifier": "geometry.couch",
+				"bone_visibility": {
+					"couch": "query.block_state('cfm:connect') == 0",
+					"couch_corner": "query.block_state('cfm:connect') == 1",
+					"couch_middle": "query.block_state('cfm:connect') == 2",
+					"couch_left": "query.block_state('cfm:connect') == 3",
+					"couch_right": "query.block_state('cfm:connect') == 4"
+				}
+			},
+			"minecraft:map_color": "#00ff00",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "purple_couch",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:loot": "loot_tables/purple_couch.json",
+			"minecraft:queued_ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "cfm:connect"
+				},
+				"interval_range": [
+					0,
+					0
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotation"
+			},
+			"minecraft:on_placed": {
+				"event": "sit"
+			},
+			"minecraft:on_interact": {
+				"event": "rider"
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:rotation') == 0",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					},
+					"tag:connect0": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 1",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					},
+					"tag:connect1": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 2",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					},
+					"tag:connect2": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 3",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					},
+					"tag:connect3": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:connect') == 1",
+				"components": {
+					"minecraft:on_placed": {
+						"event": "event:nothing"
+					},
+					"tag:corner": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:connect') == 2",
+				"components": {
+					"tag:couch_middle": {},
+					"minecraft:on_placed": {
+						"event": "event:nothing"
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:connect') == 3",
+				"components": {
+					"minecraft:on_placed": {
+						"event": "event:nothing"
+					},
+					"tag:couch_left": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:connect') == 4",
+				"components": {
+					"tag:couch_right": {},
+					"minecraft:on_placed": {
+						"event": "event:nothing"
+					}
+				}
+			}
+		],
+		"events": {
+			"cfm:connect": {
+				"sequence": [
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( 1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( -1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0') && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( -1, 0, 0, 'corner') && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 4 && query.block_state('cfm:rotation') == 0 && !query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 3 && query.block_state('cfm:rotation') == 0 && !query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( -1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( 1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1') && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( 1, 0, 0, 'corner') && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 4 && query.block_state('cfm:rotation') == 1 && !query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 3 && query.block_state('cfm:rotation') == 1 && !query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, -1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, 1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect2') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 0, 0, 1, 'corner') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 4 && query.block_state('cfm:rotation') == 2 && !query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 3 && query.block_state('cfm:rotation') == 2 && !query.block_neighbor_has_any_tag( 0, 0, 1, 'connect2') && !query.block_neighbor_has_any_tag( 0, 0, 1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, 1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 4
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, -1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( 0, 0, -1, 'corner') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 4 && query.block_state('cfm:rotation') == 3 && !query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3') && !query.block_neighbor_has_any_tag( 0, 0, 1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:connect') == 3 && query.block_state('cfm:rotation') == 3 && !query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'corner')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 1
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_state('cfm:connect') == 1 && query.block_neighbor_has_any_tag(-1, 0, 0, 'connect0') && !query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, 1, 'connect3') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0') && query.block_state('cfm:rotation') == 0 && query.block_state('cfm:connect') == 1",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect0') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 0 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 2
+						}
+					},
+					{
+						"condition": "!query.block_neighbor_has_any_tag(0, 0, 1, 'connect2') && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0') && query.block_state('cfm:rotation') == 2 && query.block_state('cfm:connect') == 1",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 0
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0') && query.block_neighbor_has_any_tag( 0, 0, 1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 2
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, 1, 'connect2') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'connect0') && query.block_state('cfm:rotation') == 2 && query.block_state('cfm:connect') == 1",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_state('cfm:connect') == 1 && query.block_neighbor_has_any_tag(-1, 0, 0, 'connect1') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 1
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, -1, 'connect3') && !query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1') && query.block_state('cfm:rotation') == 3 && query.block_state('cfm:connect') == 1",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 3 && query.block_neighbor_has_any_tag( -1, 0, 0, 'connect1') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect3')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 3
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 1
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 1 && query.block_state('cfm:connect') == 1 && query.block_neighbor_has_any_tag(1, 0, 0, 'connect1') && !query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 0
+						}
+					},
+					{
+						"condition": "query.block_neighbor_has_any_tag(0, 0, -1, 'connect2') && !query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1') && query.block_state('cfm:rotation') == 1 && query.block_state('cfm:connect') == 1",
+						"set_block_state": {
+							"cfm:connect": 0,
+							"cfm:rotation": 2
+						}
+					},
+					{
+						"condition": "query.block_state('cfm:rotation') == 2 && query.block_neighbor_has_any_tag( 1, 0, 0, 'connect1') && query.block_neighbor_has_any_tag( 0, 0, -1, 'connect2')",
+						"set_block_state": {
+							"cfm:connect": 1,
+							"cfm:rotation": 1
+						}
+					}
+				]
+			},
+			"rider": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon cfm:sit ~ ~ ~",
+								"execute @e[type=cfm:sit,c=1,r=4] ~~~ tp @s ~~~ facing @p"
+							]
+						},
+						"trigger": {
+							"event": "set_rider"
+						}
+					}
+				]
+			},
+			"set_rider": {
+				"run_command": {
+					"command": [
+						"ride @s start_riding @e [type=cfm:sit,c=1,r=4] teleport_rider"
+					],
+					"target": "other"
+				}
+			},
+			"rotation": {
+				"set_block_state": {
+					"cfm:rotation": "query.cardinal_facing_2d-2"
+				}
+			}
+		}
+	}
+}

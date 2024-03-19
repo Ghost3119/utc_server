@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:magenta_lamp"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#G#",
+            " O "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 2
+            },
+            "G": {
+                "item": "minecraft:glowstone"
+            },
+            "O": {
+                "item": "minecraft:obsidian"
+            }
+        },
+        "result": {
+            "item": "cfm:magenta_lamp",
+            "count": 1
+        }
+    }
+}

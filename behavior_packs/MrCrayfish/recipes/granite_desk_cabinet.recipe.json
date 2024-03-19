@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:granite_desk_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "SCS",
+            "S S"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 2
+            },
+            "S": {
+                "item": "minecraft:stone",
+                "data": 1
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:granite_desk_cabinet",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:jungle_mail_box"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#B#",
+            "PPP",
+            " P "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log",
+                "data": 3
+            },
+            "B": {
+                "item": "minecraft:book"
+            },
+            "P": {
+                "item": "minecraft:planks",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:jungle_mail_box",
+            "count": 1
+        }
+    }
+}

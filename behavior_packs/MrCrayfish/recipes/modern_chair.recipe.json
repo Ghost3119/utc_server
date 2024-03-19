@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:modern_chair"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "###",
+            "CCC"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:concrete"
+            },
+            "C": {
+                "item": "minecraft:concrete",
+                "data": 8
+            }
+        },
+        "result": {
+            "item": "cfm:modern_chair",
+            "count": 1
+        }
+    }
+}

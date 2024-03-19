@@ -1,0 +1,25 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:diorite_coffee_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:diorite_coffee_table",
+            "count": 1
+        }
+    }
+}

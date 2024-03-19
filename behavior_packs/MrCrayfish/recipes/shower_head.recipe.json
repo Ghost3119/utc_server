@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:shower_head"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "ii ",
+            " i ",
+            "SSS"
+        ],
+        "key": {
+            "i": {
+                "item": "minecraft:iron_ingot"
+            },
+            "S": {
+                "item": "minecraft:stone"
+            }
+        },
+        "result": {
+            "item": "cfm:shower_head",
+            "count": 1
+        }
+    }
+}

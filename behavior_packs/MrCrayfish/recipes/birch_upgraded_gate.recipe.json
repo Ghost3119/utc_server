@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "birch_upgraded_gate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:birch_fence_gate"
+            },
+            "L": {
+                "item": "minecraft:log",
+                "data": 2
+            }
+        },
+        "result": {
+            "item": "cfm:birch_upgraded_gate",
+            "count": 2
+        }
+    }
+}

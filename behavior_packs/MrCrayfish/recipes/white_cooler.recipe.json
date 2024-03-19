@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:white_cooler"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "Q Q",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay"
+            },
+            "Q": {
+                "item": "minecraft:quartz_block"
+            }
+        },
+        "result": {
+            "item": "cfm:white_cooler",
+            "count": 1
+        }
+    }
+}

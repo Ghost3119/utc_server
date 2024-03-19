@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "jungle_upgraded_gate"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:jungle_fence_gate"
+            },
+            "L": {
+                "item": "minecraft:log",
+                "data": 3
+            }
+        },
+        "result": {
+            "item": "cfm:jungle_upgraded_gate",
+            "count": 2
+        }
+    }
+}

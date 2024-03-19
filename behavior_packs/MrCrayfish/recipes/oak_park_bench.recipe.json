@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oak_park_bench"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "###",
+            "L L"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks"
+            },
+            "L": {
+                "item": "minecraft:log"
+            }
+        },
+        "result": {
+            "item": "cfm:oak_park_bench",
+            "count": 2
+        }
+    }
+}

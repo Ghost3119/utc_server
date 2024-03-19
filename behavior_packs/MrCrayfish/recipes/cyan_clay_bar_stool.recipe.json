@@ -1,0 +1,33 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:cyan_clay_bar_stool"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "SSS",
+            "Q Q"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 9
+            },
+            "S": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 9
+            },
+            "Q": {
+                "item": "minecraft:quartz_block"
+            }
+        },
+        "result": {
+            "item": "cfm:cyan_clay_bar_stool",
+            "count": 1
+        }
+    }
+}

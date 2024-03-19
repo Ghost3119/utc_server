@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_chair"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "#  ",
+            "###",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 4
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_chair",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:white_counter_drawer"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "COC",
+            "CCC"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay"
+            },
+            "C": {
+                "item": "minecraft:concrete"
+            },
+            "O": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:white_counter_drawer",
+            "count": 1
+        }
+    }
+}

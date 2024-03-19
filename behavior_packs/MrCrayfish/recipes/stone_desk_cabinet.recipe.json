@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:stone_desk_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "CKC",
+            "C C"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stone"
+            },
+            "C": {
+                "item": "minecraft:cobblestone"
+            },
+            "K": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:stone_desk_cabinet",
+            "count": 1
+        }
+    }
+}

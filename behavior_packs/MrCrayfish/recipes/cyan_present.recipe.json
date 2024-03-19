@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:cyan_present"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#C#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 9
+            },
+            "C": {
+                "item": "cfm:package"
+            }
+        },
+        "result": {
+            "item": "cfm:cyan_present",
+            "count": 1
+        }
+    }
+}

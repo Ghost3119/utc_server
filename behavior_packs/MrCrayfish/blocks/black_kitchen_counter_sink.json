@@ -1,0 +1,186 @@
+//bridge-file-version: #58
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"states": {
+				"cfm:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"cfm:filled": [
+					false,
+					true
+				]
+			},
+			"identifier": "cfm:black_kitchen_counter_sink"
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "cfm:update_rotation"
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "black_kitchen_counter_sink",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.kitchen_counter",
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "open"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_kitchen_counter_sink"
+			},
+			"minecraft:loot": "loot_tables/black_kitchen_counter_sink.json"
+		},
+		"events": {
+			"cfm:update_rotation": {
+				"set_block_state": {
+					"cfm:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"open": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'water_bucket'",
+						"set_block_state": {
+							"cfm:filled": true
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						},
+						"run_command": {
+							"command": [
+								"give @s bucket"
+							],
+							"target": "other"
+						}
+					}
+				]
+			},
+			"close": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'bucket'",
+						"set_block_state": {
+							"cfm:filled": false
+						},
+						"decrement_stack": {
+							"ignore_game_mode": true
+						},
+						"run_command": {
+							"command": [
+								"give @s water_bucket"
+							],
+							"target": "other"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:filled') == false",
+				"components": {
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							5,
+							5
+						],
+						"on_tick": {
+							"event": "close"
+						}
+					},
+					"minecraft:on_placed": {
+						"event": "nothing"
+					},
+					"minecraft:on_interact": {
+						"event": "open"
+					},
+					"minecraft:geometry": "geometry.kitchen_counter"
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:filled') == true",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "close",
+						"target": "self"
+					},
+					"minecraft:geometry": "geometry.kitchen_counter_filled"
+				}
+			}
+		]
+	}
+}

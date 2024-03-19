@@ -1,0 +1,29 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:purple_curtains"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "g g",
+            "# #"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:wool",
+                "data": 10
+            },
+            "g": {
+                "item": "minecraft:gold_ingot"
+            }
+        },
+        "result": {
+            "item": "cfm:purple_curtains",
+            "count": 2
+        }
+    }
+}

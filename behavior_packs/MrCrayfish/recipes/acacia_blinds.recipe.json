@@ -1,0 +1,28 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:acacia_blinds"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "///",
+            "///"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log2"
+            },
+            "/": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "cfm:acacia_blinds",
+            "count": 2
+        }
+    }
+}

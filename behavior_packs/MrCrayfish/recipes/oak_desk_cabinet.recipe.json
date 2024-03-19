@@ -1,0 +1,31 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oak_desk_cabinet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "PCP",
+            "P P"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:log"
+            },
+            "P": {
+                "item": "minecraft:planks"
+            },
+            "C": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:oak_desk_cabinet",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oven_5"
+        },
+        "tags": [
+            "cfm_oven"
+        ],
+        "pattern": [
+            "#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:cod"
+            }
+        },
+        "result": {
+            "item": "minecraft:cooked_cod",
+            "count": 1
+        }
+    }
+}

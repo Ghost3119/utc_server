@@ -1,0 +1,32 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:green_counter_drawer"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "CWC",
+            "CCC"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:stained_hardened_clay",
+                "data": 13
+            },
+            "C": {
+                "item": "minecraft:concrete"
+            },
+            "W": {
+                "item": "minecraft:chest"
+            }
+        },
+        "result": {
+            "item": "cfm:green_counter_drawer",
+            "count": 1
+        }
+    }
+}

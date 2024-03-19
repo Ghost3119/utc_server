@@ -1,0 +1,23 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:oven_3"
+        },
+        "tags": [
+            "cfm_oven"
+        ],
+        "pattern": [
+            "#"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:potato"
+            }
+        },
+        "result": {
+            "item": "minecraft:baked_potato",
+            "count": 1
+        }
+    }
+}

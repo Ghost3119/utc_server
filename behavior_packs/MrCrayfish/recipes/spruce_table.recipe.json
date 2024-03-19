@@ -1,0 +1,26 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:spruce_table"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            " # ",
+            " # "
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:planks",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "cfm:spruce_table",
+            "count": 1
+        }
+    }
+}

@@ -1,0 +1,200 @@
+//bridge-file-version: #92
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cfm:present_inventory",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"kills": {
+				"minecraft:transformation": {
+					"delay": {
+						"value": 0
+					},
+					"drop_inventory": true,
+					"into": "cfm:nothing"
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.3,
+				"height": 0.15
+			},
+			"minecraft:inventory": {
+				"inventory_size": 14,
+				"container_type": "hopper"
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"breathes_solids": false,
+				"breathes_air": false
+			},
+			"minecraft:inside_block_notifier": {
+				"block_list": [
+					{
+						"block": {
+							"name": "cfm:white_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:orange_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:magenta_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_blue_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:yellow_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:lime_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:pink_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:gray_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:light_gray_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:cyan_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:purple_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:blue_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:brown_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:green_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:red_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					},
+					{
+						"block": {
+							"name": "cfm:black_present"
+						},
+						"exited_block_event": {
+							"event": "kill"
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"kill": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"kills"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

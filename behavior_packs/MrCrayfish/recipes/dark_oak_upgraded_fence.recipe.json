@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "cfm:dark_oak_upgraded_fence"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "###",
+            "#L#",
+            "###"
+        ],
+        "key": {
+            "#": {
+                "item": "minecraft:fence",
+                "data": 5
+            },
+            "L": {
+                "item": "minecraft:log2",
+                "data": 1
+            }
+        },
+        "result": {
+            "item": "cfm:dark_oak_upgraded_fence",
+            "count": 8
+        }
+    }
+}

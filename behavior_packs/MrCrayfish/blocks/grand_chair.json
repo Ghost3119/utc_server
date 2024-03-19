@@ -1,0 +1,161 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cfm:grand_chair",
+			"states": {
+				"cfm:rotation": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.grand_chair",
+			"minecraft:block_light_filter": 0,
+			"minecraft:map_color": "#00ff00",
+			"minecraft:destroy_time": 0.5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "grand_chair",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:flammable": {
+				"flame_odds": 0,
+				"burn_odds": 0
+			},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.cfm_christmas_blocks"
+			},
+			"minecraft:loot": "loot_tables/grand_chair.json",
+			"minecraft:on_placed": {
+				"event": "sit"
+			},
+			"minecraft:on_interact": {
+				"event": "rider"
+			},
+			"minecraft:part_visibility": {
+				"rules": {
+					"couch": "query.block_state('cfm:connect') == 0",
+					"couch_corner": "query.block_state('cfm:connect') == 1",
+					"couch_middle": "query.block_state('cfm:connect') == 2",
+					"couch_left": "query.block_state('cfm:connect') == 3",
+					"couch_right": "query.block_state('cfm:connect') == 4"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('cfm:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					],
+					"tag:connect0": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					],
+					"tag:connect1": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					],
+					"tag:connect2": {}
+				}
+			},
+			{
+				"condition": "query.block_state('cfm:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					],
+					"tag:connect3": {}
+				}
+			}
+		],
+		"events": {
+			"rider": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon cfm:sit ~ ~ ~",
+								"execute @e[type=cfm:sit,c=1,r=4] ~~~ tp @s ~~~ facing @p"
+							]
+						},
+						"trigger": {
+							"event": "set_rider"
+						}
+					}
+				]
+			},
+			"set_rider": {
+				"run_command": {
+					"command": [
+						"ride @s start_riding @e [type=cfm:sit,c=1,r=4] teleport_rider"
+					],
+					"target": "other"
+				}
+			},
+			"rotation": {
+				"set_block_state": {
+					"cfm:rotation": "query.cardinal_facing_2d-2"
+				}
+			},
+			"furniture:place": {
+				"set_block_state": {
+					"cray:1": "(query.cardinal_facing_2d)"
+				}
+			}
+		}
+	}
+}
